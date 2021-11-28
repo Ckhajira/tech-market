@@ -2,19 +2,24 @@ package com.example.techmarket;
 
 import android.content.Context;
 import android.media.Image;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class ProductRecViewAdapter extends RecyclerView.Adapter<ProductRecViewAdapter.ViewHolder> {
+    private static final String TAG = "ProductRecViewAdapter";
 
     private ArrayList<Product> products = new ArrayList<>();
     private Context mContext;
@@ -32,7 +37,18 @@ public class ProductRecViewAdapter extends RecyclerView.Adapter<ProductRecViewAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        Log.d(TAG,"onBindViewHolder: Called");
+        holder.txtName.setText(products.get(position).getName());
+        Glide.with(mContext)
+                .asBitmap()
+                .load(products.get(position).getImageUrl())
+                .into(holder.imgProduct);
+        holder.parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, products.get(position).getName() + "Selected", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
