@@ -1,9 +1,12 @@
 package com.example.techmarket;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import java.util.ArrayList;
 
 public class AllProducts extends AppCompatActivity {
 
@@ -19,5 +22,11 @@ public class AllProducts extends AppCompatActivity {
         productsRecView = findViewById(R.id.productsRecView);
 
         productsRecView.setAdapter(adapter);
+        productsRecView.setLayoutManager(new GridLayoutManager(this,2));
+
+        ArrayList<Product> products = new ArrayList<>();
+        products.add(new Product(1, "Mac", 200, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
+        ,"Best laptop ever", "This is long"));
+        adapter.setProducts(products);
     }
 }
