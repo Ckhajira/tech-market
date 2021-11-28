@@ -1,6 +1,8 @@
 package com.example.techmarket;
 
+import android.content.Context;
 import android.media.Image;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,12 +12,22 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class ProductRecViewAdapter extends RecyclerView.Adapter<ProductRecViewAdapter.ViewHolder> {
+
+    private ArrayList<Product> products = new ArrayList<>();
+    private Context mContext;
+
+    public ProductRecViewAdapter(Context mContext) {
+        this.mContext = mContext;
+    }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_product,parent,false);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -25,7 +37,12 @@ public class ProductRecViewAdapter extends RecyclerView.Adapter<ProductRecViewAd
 
     @Override
     public int getItemCount() {
-        return 0;
+        return products.size();
+    }
+
+    public void setProducts(ArrayList<Product> products) {
+        this.products = products;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
