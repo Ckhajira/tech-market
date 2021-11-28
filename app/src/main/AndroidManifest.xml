@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechMarket">
         <activity
-            android:name=".AllProducts"
+            android:name=".AllProductsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

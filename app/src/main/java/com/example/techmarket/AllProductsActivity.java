@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class AllProducts extends AppCompatActivity {
+public class AllProductsActivity extends AppCompatActivity {
 
     private RecyclerView productsRecView;
     private ProductRecViewAdapter adapter;
