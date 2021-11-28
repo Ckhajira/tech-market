@@ -33,6 +33,8 @@ public class AllProductsActivity extends AppCompatActivity {
         ArrayList<Product> products = new ArrayList<>();
         products.add(new Product(1, "Mac", 200, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
         ,"Best laptop ever", "This is long"));
+        products.add(new Product(2, "Windows", 200, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
+                ,"Best laptop ever", "This is long"));
         adapter.setProducts(products);
     }
 }
