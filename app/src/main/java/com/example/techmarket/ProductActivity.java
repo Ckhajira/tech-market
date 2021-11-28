@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class ProductActivity extends AppCompatActivity {
 
     private TextView txtProductName, txtProductPrice, txtProductDescription;
@@ -19,6 +21,18 @@ public class ProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product);
 
         initViews();
+
+        Product product = new Product(1, "Mac", 200, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
+                ,"Best laptop ever", "This is long");
+        setData(product);
+    }
+    private void setData(Product product){
+        txtProductName.setText(product.getName());
+        txtProductPrice.setText(String.valueOf(product.getPrice()));
+        txtProductDescription.setText(product.getLongDesc());
+        Glide.with(this)
+                .asBitmap().load(product.getImageUrl())
+                .into(productImage);
     }
 
     private void initViews(){

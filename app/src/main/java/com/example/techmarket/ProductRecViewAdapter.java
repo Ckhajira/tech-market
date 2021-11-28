@@ -1,6 +1,7 @@
 package com.example.techmarket;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,7 +47,8 @@ public class ProductRecViewAdapter extends RecyclerView.Adapter<ProductRecViewAd
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, products.get(position).getName() + "Selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext, ProductActivity.class);
+                mContext.startActivity(intent);
             }
         });
     }
