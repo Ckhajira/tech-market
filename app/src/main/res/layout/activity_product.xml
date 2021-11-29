@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductActivity">
-
+    tools:context=".ProductActivity"
+    >
 
     <ImageView
         android:id="@+id/imgProduct"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="190dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -20,28 +20,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgProduct"
+        android:layout_centerHorizontal="true"
         android:text="Product Name"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
         />
     <TextView
         android:id="@+id/txtProductPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/txtProductName"
         android:text="Product Price"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
         />
     <TextView
         android:id="@+id/txtProductDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtProductPrice"
-
-        android:text="Product Description" />
+        android:layout_centerHorizontal="true"
+        android:text="Product Description"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        />
 
     <Button
         android:id="@+id/btnBuyNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtProductDescription"
-        android:text="Buy Now" />
+        android:text="Buy Now"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        />
 
 </RelativeLayout>

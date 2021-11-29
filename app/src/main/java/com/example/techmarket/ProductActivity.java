@@ -60,8 +60,8 @@ public class ProductActivity extends AppCompatActivity {
 
     private void setData(Product product){
         txtProductName.setText(product.getName());
-        txtProductPrice.setText(String.valueOf(product.getPrice()));
-        txtProductDescription.setText(product.getLongDesc());
+        txtProductPrice.setText("KES: " + String.valueOf(product.getPrice()));
+        txtProductDescription.setText("Description: " + product.getLongDesc());
         Glide.with(this)
                 .asBitmap().load(product.getImageUrl())
                 .into(productImage);
