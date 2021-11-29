@@ -3,10 +3,12 @@ package com.example.techmarket;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class BuyFormActivity extends AppCompatActivity {
 private EditText editTxtName, editTxtAddress, editTxtPhone;
+private Button btnBuyFormSubmit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,5 +17,6 @@ private EditText editTxtName, editTxtAddress, editTxtPhone;
         editTxtName =findViewById(R.id.editTxtName);
         editTxtAddress = findViewById(R.id.editTxtAddress);
         editTxtPhone = findViewById(R.id.editTxtPhone);
+        btnBuyFormSubmit = findViewById(R.id.btnBuyFormSubmit);
     }
 }
