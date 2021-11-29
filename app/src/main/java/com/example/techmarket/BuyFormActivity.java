@@ -25,7 +25,8 @@ private Button btnBuyFormSubmit;
         btnBuyFormSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(BuyFormActivity.this, SuccessActivity.class);
+//  Intent intent = new Intent(BuyFormActivity.this, SuccessActivity.class);
+
 //                startActivity(intent);
                 Toast.makeText(BuyFormActivity.this, "Hello World!", Toast.LENGTH_LONG).show();}
         });

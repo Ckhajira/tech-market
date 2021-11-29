@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,8 +26,14 @@ public class ProductActivity extends AppCompatActivity {
 
         initViews();
 
-//        Product product = new Product(1, "Mac", 200, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
-//                ,"Best laptop ever", "This is long");
+        btnBuyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductActivity.this, BuyFormActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Intent intent = getIntent();
 
         if(null != intent){
