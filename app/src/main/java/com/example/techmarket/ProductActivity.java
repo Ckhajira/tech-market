@@ -2,12 +2,15 @@ package com.example.techmarket;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
 
 public class ProductActivity extends AppCompatActivity {
 
@@ -22,10 +25,32 @@ public class ProductActivity extends AppCompatActivity {
 
         initViews();
 
-        Product product = new Product(1, "Mac", 200, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
-                ,"Best laptop ever", "This is long");
-        setData(product);
+//        Product product = new Product(1, "Mac", 200, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
+//                ,"Best laptop ever", "This is long");
+        Intent intent = getIntent();
+
+        if(null != intent){
+            int productId = intent.getIntExtra("productId", -1);
+            if (productId != -1){
+                Product incomingProduct = getBookById(productId);
+                if(null != incomingProduct){
+                    setData(incomingProduct);
+                }
+            }
+        }
+
+
     }
+
+    public Product getBookById(int id){
+        for(Product p : AllProductsActivity.getAll() ){
+            if(p.getId() == id){
+                return p;
+            }
+        }
+        return null;
+    }
+
     private void setData(Product product){
         txtProductName.setText(product.getName());
         txtProductPrice.setText(String.valueOf(product.getPrice()));
