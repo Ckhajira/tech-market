@@ -9,18 +9,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class BuyFormActivity extends AppCompatActivity {
-private EditText editTxtName, editTxtAddress, editTxtPhone;
-private Button btnBuyFormSubmit;
+    @BindView(R.id.editTxtName) EditText editTxtName;
+    @BindView(R.id.editTxtAddress) EditText editTxtAddress;
+    @BindView(R.id.editTxtPhone) EditText editTxtPhone;
+    @BindView(R.id.btnBuyFormSubmit) Button btnBuyFormSubmit;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy_form);
+        ButterKnife.bind(this);
 
-        editTxtName =findViewById(R.id.editTxtName);
-        editTxtAddress = findViewById(R.id.editTxtAddress);
-        editTxtPhone = findViewById(R.id.editTxtPhone);
-        btnBuyFormSubmit = findViewById(R.id.btnBuyFormSubmit);
+
 
         btnBuyFormSubmit.setOnClickListener(new View.OnClickListener() {
             @Override

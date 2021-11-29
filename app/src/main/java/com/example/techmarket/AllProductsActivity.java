@@ -11,9 +11,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class AllProductsActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-    private RecyclerView productsRecView;
+public class AllProductsActivity extends AppCompatActivity {
+  @BindView(R.id.productsRecView) RecyclerView productsRecView;
+
     private ProductRecViewAdapter adapter;
 
 
@@ -21,11 +24,11 @@ public class AllProductsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_products);
-
+        ButterKnife.bind(this);
 
 
         adapter = new ProductRecViewAdapter(this);
-        productsRecView = findViewById(R.id.productsRecView);
+
 
         productsRecView.setAdapter(adapter);
         productsRecView.setLayoutManager(new LinearLayoutManager(this));
