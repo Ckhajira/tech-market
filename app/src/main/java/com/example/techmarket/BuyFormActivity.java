@@ -33,7 +33,7 @@ private Button btnBuyFormSubmit;
             intent.putExtra("formAddress", formAddress);
             intent.putExtra("formPhone", formPhone);
                 startActivity(intent);
-                Toast.makeText(BuyFormActivity.this, "Hello World!", Toast.LENGTH_LONG).show();}
+                Toast.makeText(BuyFormActivity.this, "Successfully Submitted", Toast.LENGTH_LONG).show();}
         });
     }
 }

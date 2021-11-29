@@ -21,7 +21,8 @@ public class SuccessActivity extends AppCompatActivity {
         txtIntro = findViewById(R.id.txtIntro);
         txtFormDetails = findViewById(R.id.txtFormDetails);
 
-        txtFormDetails.setText("Hello " + formName + "We will deliver your package to " + formAddress);
+        txtFormDetails.setText("Hello " + formName + " We will deliver your package to " + formAddress
+        + ". In case of any inconveniences, we will call you on your phone " + formPhone);
 
 
     }

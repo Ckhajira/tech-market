@@ -4,21 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SuccessActivity">
+    tools:context=".SuccessActivity"
+    android:background="@color/blue">
+
+    <ImageView
+        android:id="@+id/imgViewTop"
+        android:layout_width="396dp"
+        android:layout_height="261dp"
+        android:layout_below="@+id/txtIntro"
+        android:layout_marginTop="45dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/success" />
 
     <TextView
         android:id="@+id/txtIntro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
         android:text="Thank you for Shopping with us!"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+
         />
 
     <TextView
         android:id="@+id/txtFormDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtIntro"
-
-        />
+        android:layout_below="@+id/imgViewTop"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+       android:layout_margin="10dp"/>
 </RelativeLayout>
