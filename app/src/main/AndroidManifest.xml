@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechMarket">
         <activity
+            android:name=".BuyFormActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProductActivity"
             android:exported="false" />
         <activity
