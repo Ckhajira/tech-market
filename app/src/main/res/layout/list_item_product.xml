@@ -6,16 +6,19 @@
     android:id="@+id/parent"
     app:cardCornerRadius="7dp"
     app:cardElevation="7dp"
-    android:layout_margin="5dp">
+    android:layout_marginLeft="80dp"
+   >
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+       >
 
         <ImageView
-            android:layout_width="130dp"
-            android:layout_height="150dp"
+            android:layout_width="230dp"
+            android:layout_height="250dp"
             android:id="@+id/imgProduct"
             android:src="@mipmap/ic_launcher" />
 
