@@ -25,9 +25,14 @@ private Button btnBuyFormSubmit;
         btnBuyFormSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//  Intent intent = new Intent(BuyFormActivity.this, SuccessActivity.class);
-
-//                startActivity(intent);
+                String formName = editTxtName.getText().toString();
+                String formAddress = editTxtAddress.getText().toString();
+                String formPhone = editTxtPhone.getText().toString();
+                Intent intent = new Intent(BuyFormActivity.this, SuccessActivity.class);
+            intent.putExtra("formName", formName);
+            intent.putExtra("formAddress", formAddress);
+            intent.putExtra("formPhone", formPhone);
+                startActivity(intent);
                 Toast.makeText(BuyFormActivity.this, "Hello World!", Toast.LENGTH_LONG).show();}
         });
     }
