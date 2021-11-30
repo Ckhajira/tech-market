@@ -34,28 +34,30 @@ public class AllProductsActivity extends AppCompatActivity {
         productsRecView.setLayoutManager(new LinearLayoutManager(this));
 
         ArrayList<Product> products = new ArrayList<>();
-        products.add(new Product(1, "Lenovo Thinkpad 3945", 20000, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
-                ,"Best laptop ever", "This everyday laptop is powered by an Intel Celeron N4020 processor, 4GB DDR4 RAM, and 64 GB M.2 PCIe SSD storage. Enjoy videos or browse online on a 14\" HD display panel, framed by narrow bezels Dolby Audio delivers crystal-clear sound through the built-in dual stereo speakers"));
-        products.add(new Product(2, "Samsung Galaxy A99", 15270, "https://cdn.pixabay.com/photo/2016/12/19/08/39/mobile-phone-1917737__340.jpg"
-                ,"Best laptop ever", "Flex Your Best Angle: With Flex Mode, just unfold your mobile phone’s screen to your best angle for hands-free pics and video calls; Choose what you want to capture, set it down, stand back and shoot your best shot"));
-        products.add(new Product(3, "Sony Wireless Headphones", 10000, "https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983__340.jpg"
-                ,"Best laptop ever", "Industry-leading noise canceling with Dual Noise Sensor technology. Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo Up to 30-hour battery life with quick charging (10 min charge for 5 hours of playback)"));
-        products.add(new Product(4, "Redragon Bluetooth Keyboard ", 3000, "https://cdn.pixabay.com/photo/2014/04/03/11/07/keyboard-311803__340.png"
-                ,"Best laptop ever", "87 Key Mechanical Gaming Keyboard with Custom Switches (Cherry Blue equivalent) for longevity with greater durability and responsiveness offering clicky medium resistance audible loud click sound crisp precise tactile feedback for typing and gaming"));
+        products.add(new Product(1, "Tableau", 10000, "https://cdn.pixabay.com/photo/2017/07/03/20/17/colorful-2468874__480.jpg"
+                ,"Best painting ever", "Piet Mondrian painted his iconic Tableau I. After a period of time experimenting with his emerging new voice, Tableau I solidified what would become Mondrian’s defining style. The hard black lines and compartmentalized color fields offered viewers a glimpse of purified geometry and mathematical precision. The clean lines and precision of the work made no reference to anything other than form, color and line. The work ushered in a style that would influence generations of painters, sculptors, architects and designers, and continues to guide creative thinkers today."));
+        products.add(new Product(2, "The Death of Socrates ", 3000, "https://cdn.pixabay.com/photo/2021/07/16/19/57/the-death-of-socrates-6471743__480.png"
+                ,"Best painting ever", "The Death of Socrates is a neo-classical art piece painted by a French painter Jacques-Louis David in 1787. This painting portrayed the classical theme of the ‘trial and execution of Socrates’ with an underlying message of resistance against France’s unfair ruling authority during those times. Few years after this painting was drawn, the French Revolution began to redefine the nature of political power."));
+        products.add(new Product(3, "Knight Victory", 20000, "https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999__340.jpg"
+                ,"Best painting ever", "Paul Rice portrait, painted in 1913 when he was 36, is a star exhibit in the National Portrait Gallery's new exhibition of her work. It usually hangs on an adjacent wall to James Guthrie's group portrait of the statesmen of the first world war; between them, these two paintings seem to launch the 20th-century galleries."));
+        products.add(new Product(4, "The Monalisa", 15270, "https://cdn.pixabay.com/photo/2013/01/05/21/02/art-74050__340.jpg"
+                ,"Best painting ever", "Mona Lisa oil painting on a poplar wood panel by Leonardo da Vinci, probably the world’s most famous painting. It was painted sometime between 1503 and 1519, when Leonardo was living in Florence, and it now hangs in the Louvre Museum, Paris, where it remained an object of pilgrimage in the 21st century."));
+
 
 
         adapter.setProducts(products);
     }
     public static ArrayList<Product> getAll(){
         ArrayList<Product> products = new ArrayList<>();
-        products.add(new Product(1, "Lenovo Thinkpad 3945", 20000, "https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196__340.jpg"
-                ,"Best laptop ever", "This everyday laptop is powered by an Intel Celeron N4020 processor, 4GB DDR4 RAM, and 64 GB M.2 PCIe SSD storage. Enjoy videos or browse online on a 14\" HD display panel, framed by narrow bezels Dolby Audio delivers crystal-clear sound through the built-in dual stereo speakers"));
-        products.add(new Product(2, "Samsung Galaxy A99", 15270, "https://cdn.pixabay.com/photo/2016/12/19/08/39/mobile-phone-1917737__340.jpg"
-                ,"Best laptop ever", "Flex Your Best Angle: With Flex Mode, just unfold your mobile phone’s screen to your best angle for hands-free pics and video calls; Choose what you want to capture, set it down, stand back and shoot your best shot"));
-        products.add(new Product(3, "Sony Wireless Headphones", 10000, "https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983__340.jpg"
-                ,"Best laptop ever", "Industry-leading noise canceling with Dual Noise Sensor technology. Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo Up to 30-hour battery life with quick charging (10 min charge for 5 hours of playback)"));
-        products.add(new Product(4, "Redragon Bluetooth Keyboard ", 3000, "https://cdn.pixabay.com/photo/2014/04/03/11/07/keyboard-311803__340.png"
-                ,"Best laptop ever", "87 Key Mechanical Gaming Keyboard with Custom Switches (Cherry Blue equivalent) for longevity with greater durability and responsiveness offering clicky medium resistance audible loud click sound crisp precise tactile feedback for typing and gaming"));
+        products.add(new Product(1, "Tableau", 10000, "https://cdn.pixabay.com/photo/2017/07/03/20/17/colorful-2468874__480.jpg"
+                ,"Best painting ever", "Piet Mondrian painted his iconic Tableau I. After a period of time experimenting with his emerging new voice, Tableau I solidified what would become Mondrian’s defining style. The hard black lines and compartmentalized color fields offered viewers a glimpse of purified geometry and mathematical precision. The clean lines and precision of the work made no reference to anything other than form, color and line. The work ushered in a style that would influence generations of painters, sculptors, architects and designers, and continues to guide creative thinkers today."));
+        products.add(new Product(2, "The Death of Socrates ", 3000, "https://cdn.pixabay.com/photo/2021/07/16/19/57/the-death-of-socrates-6471743__480.png"
+                ,"Best painting ever", "The Death of Socrates is a neo-classical art piece painted by a French painter Jacques-Louis David in 1787. This painting portrayed the classical theme of the ‘trial and execution of Socrates’ with an underlying message of resistance against France’s unfair ruling authority during those times. Few years after this painting was drawn, the French Revolution began to redefine the nature of political power."));
+        products.add(new Product(3, "Knight Victory", 20000, "https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999__340.jpg"
+                ,"Best painting ever", "Paul Rice portrait, painted in 1913 when he was 36, is a star exhibit in the National Portrait Gallery's new exhibition of her work. It usually hangs on an adjacent wall to James Guthrie's group portrait of the statesmen of the first world war; between them, these two paintings seem to launch the 20th-century galleries."));
+        products.add(new Product(4, "The Monalisa", 15270, "https://cdn.pixabay.com/photo/2013/01/05/21/02/art-74050__340.jpg"
+                ,"Best painting ever", "Mona Lisa oil painting on a poplar wood panel by Leonardo da Vinci, probably the world’s most famous painting. It was painted sometime between 1503 and 1519, when Leonardo was living in Florence, and it now hangs in the Louvre Museum, Paris, where it remained an object of pilgrimage in the 21st century."));
+
 
         return products;
     }
