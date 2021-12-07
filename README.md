@@ -24,7 +24,7 @@ He is then presented with the form for delivery which requires the name, address
 4.  Displays delivery form
    - INPUT: "Name, address and phone number of the user"
    - OUTPUT: "Redirected to the success page"
-4.  Displays success page
+5.  Displays success page
    - OUTPUT: "Thank you message to the user and a summary of the delivery information"
 
 
